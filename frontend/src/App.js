@@ -1,14 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import { Octokit } from "octokit";
 import Navbar from "./views/Navbar";
-import About from "./views/About";
-import Contact from "./views/Contact";
-import Projects from "./views/Projects";
-import Home from "./views/Home";
 
 function App() {
 	const [height, setHeight] = useState(0);
 	const [menu, setMenu] = useState(false);
+
+	const octokit = new Octokit({
+		auth: process.env.REACT_APP_AUTH_TOKEN,
+	});
 
 	const updateHeight = (value) => {
 		setHeight(value);
@@ -36,7 +37,7 @@ function App() {
 				onClick={handleCloseClick}
 				style={{ height: `calc(100% - ${height}px)` }}
 				className={`flex justify-center content-center items-center flex-col`}>
-				<Outlet />
+				<Outlet context={octokit} />
 			</div>
 		</main>
 	);
