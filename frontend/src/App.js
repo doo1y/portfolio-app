@@ -1,19 +1,15 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
-// import { Octokit } from "octokit";
 import Navbar from "./views/Navbar";
 
 function App() {
 	const [height, setHeight] = useState(0);
 	const [menu, setMenu] = useState(false);
 
-	// const octokit = new Octokit({
-	// 	auth: process.env.REACT_APP_AUTH_TOKEN,
-	// });
-
 	const updateHeight = (value) => {
 		setHeight(value);
 	};
+
 	const handleCloseClick = (e) => {
 		setMenu(false);
 	};
@@ -23,8 +19,8 @@ function App() {
 	};
 
 	return (
-		<main className='h-screen '>
-			<div id='header' className='sticky top-0 left-0 right-0'>
+		<main className='h-screen'>
+			<div id='header' className='sticky z-50 top-0 left-0 right-0'>
 				<Navbar
 					updateHeight={updateHeight}
 					handleCloseClick={handleCloseClick}
@@ -36,9 +32,10 @@ function App() {
 				id='content'
 				onClick={handleCloseClick}
 				style={{ height: `calc(100% - ${height}px)` }}
-				className={`flex justify-center content-center items-center flex-col`}>
+				className={`flex content-center items-center flex-col`}>
 				<Outlet />
 			</div>
+			<footer></footer>
 		</main>
 	);
 }

@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	font-family: "Roboto Slab", serif;
+}
+
+body {
+	background-color: #faf9f6;
+}
+
+article {
+	z-index: 999999;
+}
+
 #root {
 	margin-top: 0;
 	height: 100%;

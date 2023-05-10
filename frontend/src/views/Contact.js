@@ -2,7 +2,8 @@ import SocialIcons from "../components/SocialIcons";
 import Form from "../components/Form";
 import ContactInfo from "../components/ContactInfo";
 
-const Contact = ({ name, email, location }) => {
+const Contact = (props) => {
+	const { name, email, location } = props.details;
 	return (
 		<section className='lg:p-12 flex flex-col justify-center items-center h-full'>
 			<div className='flex flex-row'>

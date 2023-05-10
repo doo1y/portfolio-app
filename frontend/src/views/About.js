@@ -145,11 +145,11 @@ const About = (props) => {
 		<section className='h-full flex flex-col'>
 			<section
 				id='about'
-				className='xl:pr-5 h-screen flex flex-col items-end justify-center'>
+				className='xl:pr-5 flex flex-col items-end justify-center'>
 				<div className='mx-auto flex px-10 pt-20 md:flex-row flex-col items-center'>
 					<div className='xl:pl-11 md:pl-8 lg:flex-grow w-2/4 flex flex-col md:items-start md:text-left md:mb-16 mb-0 items-center text-center'>
 						<h2 className='title-font lg:text-6xl md:text-4xl text-2xl lg:mt-10 md:mt-16 mt-10 md:mb-4 font-medium'>
-							Hi, I'm Sam.
+							Hi, I'm Samuel.
 							<br className='inline-block whitespace-nowrap' />
 							<span className='lg:text-5xl md:text-3xl lg:whitespace-normal font-medium md:whitespace-nowrap'>
 								I love to build amazing apps.
@@ -245,7 +245,7 @@ const About = (props) => {
 					</div>
 				</div>
 			</section>
-			<section className='h-screen flex flex-col items-center w-full justify-center lg:justify-center'>
+			<section className='flex flex-col items-center w-full justify-center lg:justify-center'>
 				<h2 className='text-6xl mb-10'>Skills</h2>
 				<div className='grid grid-cols-10 gap-5 mb-11'>
 					{iconsArr.map((iconEl, i) => (

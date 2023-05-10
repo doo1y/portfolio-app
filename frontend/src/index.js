@@ -14,6 +14,12 @@ import Home from "./views/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const details = {
+	name: "Samuel Park",
+	email: "samjpark1497@gmail.com",
+	location: "Buena Park, CA",
+};
+
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -26,7 +32,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "contact/",
-				element: <Contact />,
+				element: <Contact details={details} />,
 			},
 			{
 				path: "about/",

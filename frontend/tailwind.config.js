@@ -26,7 +26,11 @@ module.exports = {
 		},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			colors: {
+				"off-white": "#edece9",
+			},
+		},
 	},
 	plugins: [],
 };
