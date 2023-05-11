@@ -1,5 +1,5 @@
 {
-	"name": "portfolio-app",
+	"name": "frontend",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -13,7 +13,7 @@
 		"babel-plugin-macros": "^3.1.0",
 		"devicon": "^2.15.1",
 		"devicon-react-svg": "^0.2.4",
-		"framer-motion": "^10.12.8",
+		"framer-motion": "^10.12.10",
 		"octokit": "2.0.14",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
