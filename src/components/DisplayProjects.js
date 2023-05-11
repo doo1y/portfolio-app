@@ -1,14 +1,32 @@
 import { useState, useEffect, isValidElement } from "react";
+import { Octokit } from "octokit";
 
 const DisplayProjects = (props) => {
 	const [projects, setProjects] = useState([]);
+
 	useEffect(() => {
 		const retrieve = async () => {
-			const res = await fetch("/data");
-			if (res.ok) {
-				const data = await res.json();
+			const octokit = new Octokit({
+				userAgent: "my-app/v.1.0.0",
+				auth: "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",
+				request: {
+					agent: "sam-new-user",
+				},
+				baseURL: "https://api.github.com",
+			});
+			try {
+				const result = await octokit.request("GET /user/repos", {
+					owner: "doo1y",
+				});
 
-				const projectsJSX = data.map((x, i) => (
+				const res = result.data.map((x, i) => ({
+					title: x.name,
+					url: x.html_url,
+					description: x.description,
+					created: x.created_at,
+				}));
+
+				const projectsJSX = res.map((x, i) => (
 					<div
 						key={`projects-${i}`}
 						className='overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600'>
@@ -36,8 +54,11 @@ const DisplayProjects = (props) => {
 				));
 
 				setProjects(projectsJSX);
+			} catch (e) {
+				console.log(e);
 			}
 		};
+
 		retrieve();
 	}, []);
 
