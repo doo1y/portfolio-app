@@ -2,7 +2,6 @@ import { useState, useEffect, isValidElement } from "react";
 
 const DisplayProjects = (props) => {
 	const [projects, setProjects] = useState([]);
-
 	useEffect(() => {
 		const retrieve = async () => {
 			const res = await fetch("/data");
@@ -39,19 +38,8 @@ const DisplayProjects = (props) => {
 				setProjects(projectsJSX);
 			}
 		};
-
 		retrieve();
 	}, []);
-
-	// const getFromProjectsArray = (title = null) => {
-	// 	if (title) {
-	// 		// filter out a title from the projects state and take it out, and then after update the state
-	// 	} else {
-	// 		const newData = dataJSX.slice(0, 1);
-	// 		props.setProjects(props.projects.slice(1));
-	// 		return newData;
-	// 	}
-	// };
 
 	const loading = (
 		<div className='overflow-hidden duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600'>

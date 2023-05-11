@@ -1,4 +1,3 @@
-import { useEffect, useState, useMemo } from "react";
 import DisplayProjects from "../components/DisplayProjects";
 
 const Projects = (props) => {

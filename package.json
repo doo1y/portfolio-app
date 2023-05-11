@@ -1,15 +1,19 @@
 {
-	"name": "backend",
+	"name": "portfolio",
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"start": "nodemon app.js"
+		"start": "concurrently \"npm run server\" \"npm run client\"",
+		"server": "nodemon app.js",
+		"client": "node start-client.js"
 	},
 	"dependencies": {
+		"concurrently": "^8.0.1",
 		"cookie-parser": "~1.4.4",
 		"debug": "~2.6.9",
 		"dotenv": "^16.0.3",
 		"express": "~4.16.1",
+		"fs": "0.0.1-security",
 		"morgan": "~1.9.1",
 		"nodemon": "^2.0.22",
 		"octokit": "^2.0.14",

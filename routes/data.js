@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var { Octokit } = require("octokit");
 var { ProxyAgent } = require("proxy-agent");
+
 /* GET users listing. */
 router.get("/", async function (req, res, next) {
 	const octokit = new Octokit({
@@ -27,7 +28,7 @@ router.get("/", async function (req, res, next) {
 
 		res.send(JSON.stringify(mappedResult));
 	} catch (error) {
-		res.send(error);
+		res.send(JSON.stringify(error));
 	}
 });
 
