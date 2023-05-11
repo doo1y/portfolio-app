@@ -8,7 +8,7 @@ const DisplayProjects = (props) => {
 		const retrieve = async () => {
 			const octokit = new Octokit({
 				userAgent: "my-app/v.1.0.0",
-				auth: "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",
+				auth: process.env.REACT_APP_AUTH_TOKEN,
 				request: {
 					agent: "sam-new-user",
 				},
