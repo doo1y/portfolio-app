@@ -36,7 +36,7 @@ function App() {
 				className={`flex content-center items-center flex-col`}>
 				<Outlet />
 			</main>
-			<footer id='footer' className='h-[2%]'>
+			<footer id='footer' className='mb-3'>
 				<Footer />
 			</footer>
 		</>

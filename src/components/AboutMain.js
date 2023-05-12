@@ -5,7 +5,7 @@ const AboutMain = (props) => {
 	return (
 		<section
 			id='about'
-			className='flex flex-col items-center justify-center sm:items-end md:mt-0 xsm:-mt-20 -mt-5 h-screen'>
+			className='flex flex-col items-center justify-center sm:items-end xsm:-mt-20 -mt-5 h-screen'>
 			<div className='flex sm:w-auto w-5/6 sm:px-10 md:flex-row flex-col sm:mt-0 -mt-7 justify-center items-center'>
 				<motion.div
 					ref={props.xref}

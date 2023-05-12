@@ -22,7 +22,7 @@ const Home = (props) => {
 	];
 
 	return (
-		<section className='h-full flex flex-col-reverse sm:flex-row items-center w-full justify-center lg:justify-center'>
+		<section className='flex flex-col-reverse sm:flex-row items-center w-full justify-center lg:justify-center -mt-5'>
 			<motion.div
 				ref={ref}
 				initial={{ x: "-10vw", opacity: 0 }}
