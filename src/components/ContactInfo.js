@@ -10,16 +10,18 @@ const ContactInfo = ({ name, email, location }) => {
 	});
 	return (
 		<motion.div
-			className='contactInfo'
+			className='md:px-0 sm:px-10 px-5 w-full'
 			ref={ref}
 			initial={{ x: "10vw", opacity: 0 }}
 			animate={inView ? { x: 0, opacity: 1 } : { x: "10vw", opacity: 0 }}
 			transition={{ duration: 0.4, ease: "easeInOut" }}>
-			<h4 className='text-start pb-2.5 text-4xl'>Contact Information</h4>
-			<p className='mb-5 tracking-wider text-start text-xl italic text-zinc-400 text-'>
+			<h4 className='text-start pb-2.5 md:mb-6 mb-2 md:ml-0 ml-1 md:text-4xl text-2xl'>
+				Contact Information
+			</h4>
+			<p className='mb-5 tracking-wider text-start md:text-xl text-md italic text-zinc-400 md:ml-0 ml-1 '>
 				Open for opportunities. Let's connect!
 			</p>
-			<ul className='listInfo flex flex-col gap-y-8'>
+			<ul className='listInfo flex flex-col gap-y-8 md:mx-0 mx-6'>
 				<li>
 					<div className='flex items-center'>
 						<span className='flex items-center px-[3px]'>
@@ -34,7 +36,7 @@ const ContactInfo = ({ name, email, location }) => {
 						</div>
 					</div>
 				</li>
-				<li>
+				<li className=''>
 					<div className='flex items-center'>
 						<span className='flex items-center px-[6px]'>
 							<FontAwesomeIcon

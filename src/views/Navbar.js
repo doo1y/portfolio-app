@@ -11,7 +11,7 @@ const Navbar = (props) => {
 		props.updateHeight(ref.current.clientHeight);
 	});
 	return (
-		<header
+		<div
 			ref={ref}
 			className='bg-slate-100 top-0 left-0 right-0 grid grid-cols-2 place-content-between px-3 pt-2 h-min'>
 			<div className='logo pb-2'>
@@ -46,7 +46,7 @@ const Navbar = (props) => {
 				} h-full justify-end items-center`}>
 				<FontAwesomeIcon className='md:hidden h-12 w-12' icon={solid("fish")} />
 			</div>
-		</header>
+		</div>
 	);
 };
 
