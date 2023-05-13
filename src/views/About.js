@@ -98,6 +98,12 @@ const About = (props) => {
 
 	const timeline = [
 		{
+			title: "University of California, San Diego",
+			from: "June, 2018",
+			to: "July, 2021",
+			courseWork: ["BA in Sociology", "Minor in Philosophy"],
+		},
+		{
 			title: "CS50X",
 			from: "April, 2022",
 			to: "June, 2022",

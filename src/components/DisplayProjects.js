@@ -17,6 +17,7 @@ const DisplayProjects = (props) => {
 			try {
 				const result = await octokit.request("GET /user/repos", {
 					owner: "doo1y",
+					sort: "updated",
 				});
 
 				const res = result.data.map((x, i) => ({
