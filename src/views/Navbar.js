@@ -25,12 +25,12 @@ const Navbar = (props) => {
 			<div
 				onClick={() => setToggled(!toggled)}
 				className={`${
-					toggled ? "close" : null
-				} hamburger md:hidden block place-self-end self-center md:pb-0 mb-2`}>
-				<span className='meat' />
-				<span className='meat' />
-				<span className='meat' />
-				<span className='meat' />
+					toggled ? "hamburger close" : "hamburger"
+				} md:hidden block place-self-end self-center md:pb-0 mb-2`}>
+				<span className='meat'></span>
+				<span className='meat'></span>
+				<span className='meat'></span>
+				<span className='meat'></span>
 			</div>
 			<nav className={`md:flex justify-end col-start-2`}>
 				<ul
