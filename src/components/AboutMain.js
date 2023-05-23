@@ -40,7 +40,7 @@ const AboutMain = (props) => {
 					</p>
 					<div className='group md:flex hidden h-24 lg:flex-row flex-row md:flex-row justify-center'>
 						<a
-							href='#contact'
+							href='/contact'
 							className='lg:mr-4 mr-4 md:mr-2 flex items-center justify-center text-white whitespace-nowrap xl:h-20 xl:w-64 lg:h-16 lg:w-52 h-12 w-44 bg-green-500 border-0 py-2 px-6  focus:outline-none hover:bg-green-600 rounded lg:text-2xl md:text-lg text-base'>
 							Work With Me
 						</a>
@@ -70,12 +70,12 @@ const AboutMain = (props) => {
 				</div>
 				<div className='md:hidden flex md:w-96 pt-5 pb-5 mt-2 lg:flex-row flex-row justify-center items-center'>
 					<a
-						href='#contact-2'
+						href='/contact'
 						className='flex items-center justify-center text-white whitespace-nowrap sm:h-16 sm:w-52 h-12 w-42 bg-green-500 border-0 py-2 px-6  focus:outline-none hover:bg-green-600 rounded md:text-base text-sm'>
 						Work With Me
 					</a>
 					<a
-						href='#projects-2'
+						href='#projects'
 						onClick={props.scrollClick}
 						className={
 							"lg:ml-4 ml-4 md:ml-0 flex justify-center flex-col whitespace-nowrap text-gray-400 h-12 w-42 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white items-center rounded md:text-base text-sm sm:h-16 sm:w-52"
